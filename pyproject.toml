@@ -6,6 +6,8 @@ authors = ["Jan Vollmer <jan@vllmr.dev>"]
 license = "MIT"
 readme = "README.md"
 packages = [{include = "fastapi_inferring_depends"}]
+repository="https://github.com/jvllmr/fastapi-inferring-depends"
+
 
 [tool.poetry.dependencies]
 python = "^3.7"
