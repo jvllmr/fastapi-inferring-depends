@@ -1,0 +1,10 @@
+{
+  "[python]": {
+    "editor.defaultFormatter": "ms-python.black-formatter"
+  },
+  "python.formatting.provider": "none",
+  "python.linting.mypyEnabled": true,
+  "python.analysis.typeCheckingMode": "strict",
+  "python.terminal.activateEnvInCurrentTerminal": true,
+  "python.defaultInterpreterPath": ".venv/bin/python"
+}
