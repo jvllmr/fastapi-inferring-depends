@@ -13,7 +13,7 @@ A wrapper around FastAPI's Depends function that infers its return type from its
 from fastapi_inferring_depends import Depends
 from fastapi import FastAPI
 
-router = FastAPI()
+app = FastAPI()
 
 
 async def answer_to_everything_dependency():
