@@ -10,8 +10,7 @@ def Depends(
     dependency: t.Callable[..., t.AsyncGenerator[TDepends, None]],
     *,
     use_cache: bool = True,
-) -> TDepends:
-    ...
+) -> TDepends: ...
 
 
 @t.overload
@@ -19,8 +18,7 @@ def Depends(
     dependency: t.Callable[..., t.Coroutine[None, None, TDepends]],
     *,
     use_cache: bool = True,
-) -> TDepends:
-    ...
+) -> TDepends: ...
 
 
 @t.overload
@@ -28,20 +26,17 @@ def Depends(
     dependency: t.Callable[..., t.Generator[TDepends, None, None]],
     *,
     use_cache: bool = True,
-) -> TDepends:
-    ...
+) -> TDepends: ...
 
 
 @t.overload
 def Depends(
     dependency: t.Callable[..., TDepends], *, use_cache: bool = True
-) -> TDepends:
-    ...
+) -> TDepends: ...
 
 
 @t.overload
-def Depends(dependency: None = None, *, use_cache: bool = True) -> t.Any:
-    ...
+def Depends(dependency: None = None, *, use_cache: bool = True) -> t.Any: ...
 
 
 def Depends(
