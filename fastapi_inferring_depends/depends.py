@@ -1,6 +1,6 @@
 import typing as t
 
-from fastapi import params  # type: ignore
+from fastapi import params
 
 TDepends = t.TypeVar("TDepends")
 
@@ -49,7 +49,7 @@ def Depends(
     *,
     use_cache: bool = True,
 ) -> t.Any:
-    return params.Depends(dependency=dependency, use_cache=use_cache)  # type: ignore
+    return params.Depends(dependency=dependency, use_cache=use_cache)
 
 
 __all__ = ("Depends",)
