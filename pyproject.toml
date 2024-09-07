@@ -46,6 +46,3 @@ build-backend = "pdm.backend"
 [tool.mypy]
 python_version = "3.9"
 files = ["fastapi_inferring_depends", "test_example.py"]
-
-[tool.isort]
-profile = "black"
