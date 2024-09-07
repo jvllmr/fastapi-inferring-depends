@@ -8,36 +8,22 @@ on:
   schedule:
     - cron: "0 0 * * *"
 
-env:
-  PIP_CACHE_DIR: pip_cache
-
 jobs:
   Test:
-    runs-on: ${{ matrix.os }}
+    runs-on: ubuntu-latest
     strategy:
-      fail-fast: true
       matrix:
-        python-version: [3.7, 3.8, 3.9, "3.10", "3.11"]
-        os: [ubuntu-latest]
+        python-version: [3.9, "3.10", "3.11", "3.12"]
     steps:
-      - uses: actions/checkout@v3
-      - name: Set up Python ${{ matrix.python-version }}
-        uses: actions/setup-python@v4
+      - uses: actions/checkout@v4
+        with:
+          submodules: true
+      - name: Setup PDM
+        uses: pdm-project/setup-pdm@v4
         with:
           python-version: ${{ matrix.python-version }}
-      - name: Cache wheels
-        id: cache_wheels
-        uses: actions/cache@v3
-        with:
-          path: ${{ env.PIP_CACHE_DIR }}
-          key: ${{ matrix.os }}${{ matrix.python-version }}
-      - name: Set up poetry
-        uses: abatilo/actions-poetry@v2
-        with:
-          poetry-version: 1.5.0
+          cache: true
       - name: Install dependencies
-        run: poetry install
-      - name: Testing
-        run: poetry run mypy
-      - name: Building
-        run: poetry build
+        run: pdm install
+      - name: Run tests
+        run: pdm test

@@ -6,23 +6,25 @@ on:
 
 jobs:
   deploy:
+    name: Upload to PyPI
     runs-on: ubuntu-latest
-
+    environment:
+      name: pypi
+      url: https://pypi.org/p/fastapi-inferring-depends
+    permissions:
+      id-token: write
     steps:
-      - uses: actions/checkout@v3
-      - name: Set up Python
-        uses: actions/setup-python@v4
+      - uses: actions/checkout@v4
+        with:
+          submodules: true
+      - name: Setup PDM
+        uses: pdm-project/setup-pdm@v4
         with:
           python-version: "3.10"
+          cache: true
       - name: Install dependencies
-        run: |
-          python -m pip install --upgrade pip
-          python -m pip install poetry==1.5.0
-          python -m poetry install
-      - name: Build package
-        run: python -m poetry build
-      - name: Publish package to PyPI
-        uses: pypa/gh-action-pypi-publish@release/v1
-        with:
-          user: ${{ secrets.PYPI_USERNAME }}
-          password: ${{ secrets.PYPI_API_TOKEN }}
+        run: pdm install --frozen-lock
+      - name: Build
+        run: pdm build
+      - name: Publish
+        run: pdm publish
