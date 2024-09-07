@@ -30,7 +30,7 @@ distribution = true
 
 [tool.pdm.dev-dependencies]
 dev = [
-    "black>=23.3.0",
+    "black>=24.8.0",
     "ruff>=0.0.270",
     "mypy>=1.3.0",
     "typing-extensions>=4.6.2",
