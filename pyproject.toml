@@ -49,5 +49,3 @@ files = ["fastapi_inferring_depends", "test_example.py"]
 
 [tool.isort]
 profile = "black"
-
-

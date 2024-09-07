@@ -1,6 +1,5 @@
-from typing import Any, AsyncGenerator, Generator
-
-from typing_extensions import Literal
+from collections.abc import AsyncGenerator, Generator
+from typing import Any, Literal
 
 from fastapi_inferring_depends import Depends
 
