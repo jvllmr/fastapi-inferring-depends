@@ -5,7 +5,7 @@
 groups = ["default", "dev"]
 strategy = ["inherit_metadata"]
 lock_version = "4.5.0"
-content_hash = "sha256:eb60011c066a672ec6098a76f888c0e4a401f65ed4831a0d2d920130afeaec1c"
+content_hash = "sha256:d879419f5ef200930ac229eb6076f60431a5282ecea2b2aa996b221b7a9b74f1"
 
 [[metadata.targets]]
 requires_python = "~=3.9"
@@ -136,7 +136,7 @@ files = [
 
 [[package]]
 name = "fastapi"
-version = "0.115.10"
+version = "0.115.11"
 requires_python = ">=3.8"
 summary = "FastAPI framework, high performance, easy to learn, fast to code, ready for production"
 groups = ["default"]
@@ -146,8 +146,8 @@ dependencies = [
     "typing-extensions>=4.8.0",
 ]
 files = [
-    {file = "fastapi-0.115.10-py3-none-any.whl", hash = "sha256:47346c5437e933e68909a835cf63890a9bd52fb6091b2499b996c08a01ca43a5"},
-    {file = "fastapi-0.115.10.tar.gz", hash = "sha256:920cdc95c1c6ca073656deae80ad254512d131031c2d7759c87ae469572911ee"},
+    {file = "fastapi-0.115.11-py3-none-any.whl", hash = "sha256:32e1541b7b74602e4ef4a0260ecaf3aadf9d4f19590bba3e1bf2ac4666aa2c64"},
+    {file = "fastapi-0.115.11.tar.gz", hash = "sha256:cc81f03f688678b92600a65a5e618b93592c65005db37157147204d8924bf94f"},
 ]
 
 [[package]]
