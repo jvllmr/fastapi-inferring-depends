@@ -6,7 +6,7 @@ authors = [
     {name = "Jan Vollmer", email = "jan@vllmr.dev"},
 ]
 dependencies = [
-    "fastapi>=0.115.12",
+    "fastapi>=0.116.1",
 ]
 requires-python = "<4.0,>=3.9"
 readme = "README.md"
