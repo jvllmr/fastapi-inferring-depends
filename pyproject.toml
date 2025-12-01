@@ -6,7 +6,7 @@ authors = [
     {name = "Jan Vollmer", email = "jan@vllmr.dev"},
 ]
 dependencies = [
-    "fastapi>=0.121.3",
+    "fastapi>=0.123.0",
 ]
 requires-python = "<4.0,>=3.9"
 readme = "README.md"
@@ -31,8 +31,8 @@ distribution = true
 [tool.pdm.dev-dependencies]
 dev = [
     "black>=25.11.0",
-    "ruff>=0.14.6",
-    "mypy>=1.18.2",
+    "ruff>=0.14.7",
+    "mypy>=1.19.0",
     "typing-extensions>=4.15.0",
     "blacken-docs>=1.20.0",
 ]
